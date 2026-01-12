@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+    name="viewport">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="js/sweetalert2.all.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/index.umd.js"></script>
+  <script src="js/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  <!-- Firebase SDK -->
+  <script src="js/firebase-app-compat.js"></script>
+  <script src="js/firebase-firestore-compat.js"></script>
+  <script src="js/fire.js"></script>
+
+
+  <title>𝐇𝐚𝐩𝐩𝐲 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐑𝐚𝐛𝐛𝐢𝐭 🐇</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <meta name="google" content="notranslate">
+
+
+</head>
+
+<body>
+  <div id="hearts"></div>
+
+  <audio src="media/hbd.mp3" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <!-- Wallpaper --><img src="images/bg.png" id="wallpaper">
+    <div id="beneranblur"></div>
+  </div>
+
+  <div id="Content">
+    <div id="kadoIn">
+      <!-- Tombol Surat --><img src="images/box.png">
+    </div>
+    <p id="ket">I have a surprice for You ! &#128064;</p>
+    <p id="ket">Click on The BOX! &#128128;</p>
+
+    <div class="kumpulanstiker">
+
+      <img src="images/1.gif" id="fotostiker">
+      <img src="images/2.gif" id="fotostiker1">
+      <img src="images/3.gif" id="fotostiker2">
+      <img src="images/4.gif" id="fotostiker3">
+      <img src="images/5.gif" id="fotostiker4">
+      <img src="images/6.gif" id="fotostiker5">
+
+      <img src="images/7.gif" id="fotostiker6">
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id="bq" data-text="@gitanshu.world">
+        <!-- <p id="kalimat">I have something for you!..🤫🤗</p> -->
+        <p id="kalimat"> I have something for u !..🤫🤗 </p>
+
+
+        <p id="pesan1">Click the hearts one by one! 😁🥂</p>
+        <div id="kolombaru">
+          <li id="lv1">🤍</li>
+          <li id="lv2">🤍</li>
+          <li id="lv3">🤍</li>
+          <li id="lv4">🤍</li>
+        </div>
+
+        <p id="pesan2">Wait...</p>
+
+        <p id="pesan3">Someone has a birthday today! 🤭🎉</p>
+        <p id="pesan4">Happy Birthdayy..!! </p>
+        <p id="pesan5" class="gaya2">You're getting older, hehe🫠</p>
+        <p id="pesan6" class="gaya2">Hope u have a long life - so u can give me treat every year! 😷🎀</p>
+        <p id="pesan7" class="gaya2">Just kidding!😸</p>
+
+        <p id="pesan8" class="gaya2">Stay healthy!🥹</p>
+        <p id="pesan9" class="gaya2">
+          Oh yeah ! On this special day, I hope u become a better person! 🐣🍾<br>But - Never become like me 💀
+        </p>
+        <p id="pesan10" class="gaya2">Happy Level Up Day !! 🥳</p>
+
+
+        <p id="opsL">>Click to Continue</p>
+      </blockquote>
+    </div>
+
+
+    <div id="Tombol"><a id="By"> 🧸 Continue 🫴</a></div>
+
+
+    <p id="katatambahan" class="sembunyi">
+      Pehle Party dien ap MOTO😾
+    </p>
+
+
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="images/8.gif">
+      <p id="kataditolak">Waise bhi - Party ke pehle <br> > NO GIFT 😜</p>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    audio = new Audio("" + linkmp3.src);
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-snowflake";
+      heart.style.left = Math.random() * 90 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+      body.appendChild(heart);
+    }
+    setInterval(function name(params) {
+      var heartArr = document.querySelectorAll(".fa-snowflake");
+      if (heartArr.length > 100) {
+        heartArr[0].remove();
+      }
+    }, 100);
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: "#FF0040",
+      imageHeight: 80,
+    });
+
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+        kadoIn.style =
+          "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 500);
+      }
+    };
+
+    async function inipesan() {
+      var { value: nama } = await swals.fire({
+        title: "Enter your name",
+        input: "text",
+      });
+      if (nama && nama.length < 11) {
+        window.nama = nama;
+        vketikhalo = "Hii, " + nama + "🐇";
+        mulainama();
+      } else {
+        await swals.fire(
+          "oops!",
+          "Name cannot be empty or more than 10 characters!!"
+        );
+        inipesan();
+      }
+    }
+    // var tanya = " - Do you want a gift >? 👉👈";
+    var tanya = " - Do u want a gift >?🎅🏼<br>👉👈";
+
+    var opstanya = "Come here & take it! 👀👻";
+    var tompositif = "Dedoo 🫠";
+    var tomnegatif = "Nahi Chahiye 🫣";
+
+    async function menuju() {
+      await swals.fire("Great!", "Now Click here and surprise me!! ❤️", "success");
+      window.location = "https://www.instagram.com/direct/t/17847674114951381/";
+    }
+
+  </script>
+
+  <script>
+    // ... (previous code remains the same)
+
+    async function inipesan() {
+      var { value: nama } = await swals.fire({
+        title: "Enter your name",
+        input: "text",
+      });
+
+      // Modified condition to only accept "RABBIT" in capital letters
+      if (nama && nama === "RABBIT") {  // Case-sensitive check for capital letters only
+        window.nama = nama;
+        vketikhalo = "Hii, " + nama + "🐇";
+        mulainama();
+      } else {
+        await swals.fire(
+          "Access Denied!",
+          "Only 'RABBIT' is allowed! ❌"  // Changed error message
+        );
+        inipesan();
+      }
+    }
+
+    // ... (rest of the code remains the same)
+  </script>
+
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
